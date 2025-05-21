@@ -221,7 +221,6 @@ int main() {
 
         default:
                 printf("Opcao Invalida!");
-                
             break;
         }
         break;
@@ -231,6 +230,96 @@ int main() {
         printf("1.Populacao\n2.Area/km2\n3.Pontos Turisticos\n4.Densidade Demografica\n");
         printf("Escolha: ");
         scanf("%d", &opcao2);
+
+        switch (opcao2)
+        {
+        case 1:
+            resultado = (populacaoPais1 + pib1) > (populacaoPais2 + pib2) ? 1 : 0;
+            empate = (populacaoPais1 + pib1) == (populacaoPais2 + pib2) ? 1 : 0;
+
+            if (empate == 1)
+            {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Populacao da Carta %s: %d Populacao da Carta %s: %d\n", nomePais1, populacaoPais1, nomePais2, populacaoPais2);
+                printf("Na soma dos atributos as cartas %s e %s empataram", nomePais1, nomePais2);
+
+            } else if (resultado == 1) {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Populacao da Carta %s: %d Populacao da Carta %s: %d\n", nomePais1, populacaoPais1, nomePais2, populacaoPais2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais1);
+            } else {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Populacao da Carta %s: %d Populacao da Carta %s: %d\n", nomePais1, populacaoPais1, nomePais2, populacaoPais2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais2);
+            }
+
+            break;
+
+        case 2:
+            resultado = (areaKm1 + pib1) > (areaKm2 + pib2) ? 1 : 0;
+            empate = (areaKm1 + pib1) == (areaKm2 + pib2) ? 1 : 0;
+
+            if (empate == 1)
+            {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Area/km2 da Carta %s: %.3fkm2 Area/km2 da Carta %s: %.3fkm2\n", nomePais1, areaKm1, nomePais2, areaKm2);
+                printf("Na soma dos atributos as cartas %s e %s empataram", nomePais1, nomePais2);
+            } else if (resultado == 1) {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Area/km2 da Carta %s: %.3fkm2 Area/km2 da Carta %s: %.3fkm2\n", nomePais1, areaKm1, nomePais2, areaKm2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais1);
+            } else {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Area/km2 da Carta %s: %.3fkm2 Area/km2 da Carta %s: %.3fkm2\n", nomePais1, areaKm1, nomePais2, areaKm2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais2);
+            }
+            
+            break;
+        case 3:
+            resultado = (pontosTuristicos1 + pib1) > (pontosTuristicos2 + pib2) ? 1 : 0;
+            empate = (pontosTuristicos1 + pib1) == (pontosTuristicos2 + pib2) ? 1 : 0;
+
+            if (empate == 1)
+            {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Pontos Turisticos da Carta %s: %d Pontos Turisticos da Carta %s: %d\n", nomePais1, pontosTuristicos1, nomePais2, pontosTuristicos2);
+                printf("Na soma dos atributos as cartas %s e %s empataram", nomePais1, nomePais2);
+            } else if (resultado == 1) {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Pontos Turisticos da Carta %s: %d Pontos Turisticos da Carta %s: %d\n", nomePais1, pontosTuristicos1, nomePais2, pontosTuristicos2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais1);
+            } else {
+                printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+                printf("Pontos Turisticos da Carta %s: %d Pontos Turisticos da Carta %s: %d\n", nomePais1, pontosTuristicos1, nomePais2, pontosTuristicos2);
+                printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais2);
+            }
+            
+            break;
+        case 4:
+        resultado = (densidadeDemografica1 + pib1) < (densidadeDemografica2 + pib2) ? 1 : 0;
+        empate = (densidadeDemografica1 + pib1) == (densidadeDemografica2 + pib2) ? 1 : 0;
+
+        if (empate == 1)
+        {
+            printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+            printf("Densidade Demografica da Carta %s: %.2f Densidade Demografica da Carta %s: %.2f\n", nomePais1, densidadeDemografica1, nomePais2, densidadeDemografica2);
+            printf("Na soma dos atributos as cartas %s e %s empataram", nomePais1, nomePais2);
+        } else if (resultado == 1) {
+            printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+            printf("Densidade Demografica da Carta %s: %.2f Densidade Demografica da Carta %s: %.2f\n", nomePais1, densidadeDemografica1, nomePais2, densidadeDemografica2);
+            printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais1);
+        } else {
+            printf("PIB da Carta %s: %.2fT PIB da Carta %s: %.2fT\n", nomePais1, pib1, nomePais2, pib2);
+            printf("Densidade Demografica da Carta %s: %.2f Densidade Demografica da Carta %s: %.2f\n", nomePais1, densidadeDemografica1, nomePais2, densidadeDemografica2);
+            printf("Na soma dos atributos a carta %s Venceu essa rodada!", nomePais2);
+        }
+        
+        break;
+
+        default:
+            printf("Opcao Invalida!");
+            break;
+        }
         break;
 
     case 4 :
