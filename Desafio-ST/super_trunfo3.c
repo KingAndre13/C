@@ -4,16 +4,16 @@
 int main() {
     char nomePais1[20] = "Espanha";
     char nomePais2[20] = "Franca";
-    int populacaoPais1 =1 /*48350000*/;
-    int populacaoPais2 = 1/*68290000*/;
-    float areaKm1 = 1/*506.030*/;
-    float areaKm2 = 1/*551.695*/;
-    float pib1 = 1/*1.62*/; // O PIB vai está na casa do Trilhões ex: 3000000000 = 3.0T
-    float pib2 = 1/*3.05*/;
-    int pontosTuristicos1 = 1/*49*/;  // Fonte usada foram os patrimônios mundiais considerados pela UNESCO
-    int pontosTuristicos2 = 2/*49*/;
-    float densidadeDemografica1 = /*populacaoPais1 / areaKm1;*/1;
-    float densidadeDemografica2 = /*populacaoPais2 / areaKm2;*/1;
+    int populacaoPais1 = 48350000;
+    int populacaoPais2 = 68290000;
+    float areaKm1 = 506.030;
+    float areaKm2 = 551.695;
+    float pib1 = 1.62; // O PIB vai está na casa do Trilhões ex: 3000000000 = 3.0T
+    float pib2 = 3.05;
+    int pontosTuristicos1 = 49;  // Fonte usada foram os patrimônios mundiais considerados pela UNESCO
+    int pontosTuristicos2 = 49;
+    float densidadeDemografica1 = populacaoPais1 / areaKm1;
+    float densidadeDemografica2 = populacaoPais2 / areaKm2;
 
     int opcao1;
     int opcao2;
